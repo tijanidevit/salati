@@ -8,7 +8,7 @@
 <br />
 <p align="center">
   <a href="https://salat.hmounir.com">
-    <img src="src/images/logo.png" alt="Logo" width="80" height="80">
+    <img src="https://raw.githubusercontent.com/hamzaPixl/salat/master/src/images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Salati</h3>
@@ -47,20 +47,20 @@
 
 [![Prayer Time][product-screenshot]](https://salat.hmounir.com)
 
-I always wantef to build something that can be usefull for a community. First community i am in from my birth is muslim ! What a great opportunity for me to build something that can bring me peace and satisfaction and also be usefull for other people.
+I always wanted to build something that can be usefull for a community. First community i am in from my birth is muslim ! What a great opportunity for me to build something that can bring me peace and satisfaction and also be usefull for other people.
 
 I wanted to create something that can provide you prayer time for any location. A lot of actors do the same today, but i wanted something tghat can be more like an hybrid app. Have it as a web app, website, desktop app, in the same way thats good for me !
 
 Nothing to bother the customer, no advertissement, just free service.
 
+This will be the server support behind the possible application or web site that can come later.
 ### Built With
 
 You can see here the major frameworks that was built with. Project is mainly frontend.
 
-- [Gatsby](https://www.gatsbyjs.com)
-- [Styled Components](https://styled-components.com/)
-- [React](https://reactjs.org/)
-- [GoogleAnalitics](https://analytics.google.com/analytics/web/)
+- [Fastify](https://www.fastify.io/)
+- [Nodejs](https://nodejs.org/en/)
+- [Heroku](https://www.heroku.com/)
 
 - [Aladhan](https://aladhan.com/) Some information for date and some meta information.
 - [Sunnah api](https://sunnah.api-docs.io/1.0/getting-started/introduction) Provide random hadits for the application.
@@ -111,7 +111,7 @@ You need first to install the dependencies.
 
 ## Roadmap
 
-See the [open issues](https://github.com/hamzaPixl/salat/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/hamzaPixl/salati/issues) for a list of proposed features (and known issues).
 
 ## Contributing
 
@@ -132,16 +132,16 @@ Distributed under the MIT License. See `LICENSE` for more information.
 Hamza Mounir - [@pixlhamza](https://twitter.com/pixlhamza) - hamza.pixelle@gmail.com
 Project Demo: [https://salat.hmounir.com](https://salat.hmounir.com)
 
-[contributors-shield]: https://img.shields.io/github/contributors/hamzaPixl/salat.svg?style=for-the-badge
-[contributors-url]: https://github.com/hamzaPixl/salat/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/hamzaPixl/salat.svg?style=for-the-badge
-[forks-url]: https://github.com/hamzaPixl/salat/network/members
-[stars-shield]: https://img.shields.io/github/stars/hamzaPixl/salat.svg?style=for-the-badge
-[stars-url]: https://github.com/hamzaPixl/salat/stargazers
-[issues-shield]: https://img.shields.io/github/issues/hamzaPixl/salat.svg?style=for-the-badge
-[issues-url]: https://github.com/hamzaPixl/salat/issues
-[license-shield]: https://img.shields.io/github/license/hamzaPixl/salat.svg?style=for-the-badge
-[license-url]: https://github.com/hamzaPixl/salat/blob/master/LICENSE
+[contributors-shield]: https://img.shields.io/github/contributors/hamzaPixl/salati.svg?style=for-the-badge
+[contributors-url]: https://github.com/hamzaPixl/salati/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/hamzaPixl/salati.svg?style=for-the-badge
+[forks-url]: https://github.com/hamzaPixl/salati/network/members
+[stars-shield]: https://img.shields.io/github/stars/hamzaPixl/salati.svg?style=for-the-badge
+[stars-url]: https://github.com/hamzaPixl/salati/stargazers
+[issues-shield]: https://img.shields.io/github/issues/hamzaPixl/salati.svg?style=for-the-badge
+[issues-url]: https://github.com/hamzaPixl/salati/issues
+[license-shield]: https://img.shields.io/github/license/hamzaPixl/salati.svg?style=for-the-badge
+[license-url]: https://github.com/hamzaPixl/salati/blob/master/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/hamza-mounir-0a7bb6139/
 [product-screenshot]: src/images/screen.png
