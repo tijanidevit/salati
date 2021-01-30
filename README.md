@@ -45,8 +45,6 @@
 
 ## About The Project
 
-[![Prayer Time][product-screenshot]](https://salat.hmounir.com)
-
 I always wanted to build something that can be usefull for a community. First community i am in from my birth is muslim ! What a great opportunity for me to build something that can bring me peace and satisfaction and also be usefull for other people.
 
 I wanted to create something that can provide you prayer time for any location. A lot of actors do the same today, but i wanted something tghat can be more like an hybrid app. Have it as a web app, website, desktop app, in the same way thats good for me !
@@ -144,5 +142,3 @@ Project Demo: [https://salat.hmounir.com](https://salat.hmounir.com)
 [license-url]: https://github.com/hamzaPixl/salati/blob/master/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/hamza-mounir-0a7bb6139/
-[product-screenshot]: src/images/screen.png
-[product-screenshot2]: src/images/screen2.png
