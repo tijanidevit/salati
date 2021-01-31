@@ -1,7 +1,7 @@
 const config = require('./config');
 const server = require('./server');
 
-server.listen(config.port, (err) => {
+server.listen(config.port, config.host, (err) => {
   if (err) {
     server.log.error(err);
   }
