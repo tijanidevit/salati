@@ -75,8 +75,8 @@ server.register(load, {
 });
 
 server.register(assets, {
-  root: path.join(__dirname, 'static'),
-  prefix: '/static/',
+  root: path.join(__dirname, 'schemas'),
+  prefix: '/schemas/',
 })
 
 module.exports = server;
