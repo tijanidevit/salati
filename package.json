@@ -7,11 +7,20 @@
   "author": "Hamza Mounir <hamza.pixelle@gmail.com>",
   "main": "server.js",
   "dependencies": {
-
+    "config": "^3.3.3",
+    "fastify": "^3.11.0",
+    "fastify-autoload": "^3.4.2",
+    "fastify-cors": "^5.2.0",
+    "fastify-helmet": "^5.2.0",
+    "fastify-static": "^3.4.0",
+    "fastify-swagger": "^4.0.1",
+    "pino-pretty": "^4.3.0"
   },
   "devDependencies": {
-    "semantic-release": "^15.13.12",
+    "eslint": "^7.18.0",
+    "eslint-plugin-prettier": "^3.3.1",
     "prettier": "2.1.1",
+    "semantic-release": "^15.13.12",
     "xo": "^0.24.0"
   },
   "keywords": [
@@ -21,7 +30,7 @@
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "semantic-release": "semantic-release",
+    "release": "semantic-release",
     "lint": "xo",
     "autofix": "xo --fix",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\""

@@ -1,19 +1,31 @@
 const path = require('path');
-const swagger = require('fastify-swagger')();
-const static = require('fastify-static')();
-const cors = require('fastify-cors')();
-const helmet = require('fastify-helmet')();
-const AutoLoad = require('fastify-autoload');
+const swagger = require('fastify-swagger');
+const assets = require('fastify-static');
+const cors = require('fastify-cors');
+const helmet = require('fastify-helmet');
+const load = require('fastify-autoload');
 const fastify = require('fastify');
 
 const config = require('./config');
-const logger = require('./logger');
-
-logger.init();
+const docs = require('./docs');
 
 const server = fastify({
   logger: {
     level: config.logLevel,
+    redact: ['req.headers.authorization'],
+    prettyPrint: true,
+    serializers: {
+      req (req) {
+        return {
+          method: req.method,
+          url: req.url,
+          headers: req.headers,
+          hostname: req.hostname,
+          remoteAddress: req.ip,
+          remotePort: req.connection.remotePort
+        }
+      }
+    }
   },
 });
 
@@ -22,38 +34,32 @@ const server = fastify({
  */
 
 server.register(cors);
-server.register(helmet);
+server.register(helmet, {
+  contentSecurityPolicy: {
+    directives: {
+      defaultSrc: [`'self'`],
+      styleSrc: [`'self'`, `'unsafe-inline'`],
+      imgSrc: [`'self'`, 'data:', 'validator.swagger.io'],
+      scriptSrc: [`'self'`, `https: 'unsafe-inline'`],
+    },
+  },
+});
 
 /**
  * Custom plugins, middlewares etc.
  */
-server.register(AutoLoad, {
+server.register(load, {
   dir: path.join(__dirname, 'plugins'),
   options: {},
 });
 
-/**
- * Schemas for validation, serialisation and swagger
- */
-server.addSchema(require('./schemas/definitions'));
-server.addSchema(require('./schemas/requests'));
-server.addSchema(require('./schemas/responses'));
-
-/**
- * OpenAPI Docs (Swagger)
- */
-server.register(swagger, require('./docs'));
-server.register(static, {
-  root: path.join(__dirname, 'schemas'),
-  prefix: '/',
-});
+server.register(swagger, docs);
 
 /*
  * Error handler
  */
 server.setErrorHandler(async (error, request, reply) => {
   if (reply.res.statusCode === 500) {
-    logger.error('Error popping', error);
     return reply.internalServerError();
   }
 
@@ -63,9 +69,14 @@ server.setErrorHandler(async (error, request, reply) => {
 /**
  * Routes
  */
-server.register(AutoLoad, {
+server.register(load, {
   dir: path.join(__dirname, 'routes'),
   options: {},
 });
+
+server.register(assets, {
+  root: path.join(__dirname, 'static'),
+  prefix: '/static/',
+})
 
 module.exports = server;
