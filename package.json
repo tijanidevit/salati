@@ -19,6 +19,7 @@
   "devDependencies": {
     "eslint": "^7.18.0",
     "eslint-plugin-prettier": "^3.3.1",
+    "jest": "^26.6.3",
     "prettier": "2.1.1",
     "semantic-release": "^15.13.12",
     "xo": "^0.24.0"
@@ -31,6 +32,8 @@
     "start": "node index.js",
     "dev": "nodemon index.js",
     "release": "semantic-release",
+    "test": "jest test testPathIgnorePatterns",
+    "coverage": "jest test testPathIgnorePatterns --coverage",
     "lint": "xo",
     "autofix": "xo --fix",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\""
