@@ -13,7 +13,7 @@ module.exports = function (fastify, opts, next) {
         description: info.description,
         author: info.author,
         website: info.homepage,
-        bugs: info.bugs,
+        bugs: info.bugs.url,
       });
     }
   })
