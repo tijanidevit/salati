@@ -16,7 +16,7 @@
   <p align="center">
     Sharing with the muslim community, a little server that provide multiple assets such as quran, hadits, prayer times...
     <br />
-    <a href="https://github.com/hamzaPixl/salati/blob/master/README.md"><strong>Explore the docs »</strong></a>
+    <a href="https://salati.hmounir.com/docs/static/index.html"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <a href="https://salat.hmounir.com/">View Demo</a>
