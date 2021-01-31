@@ -4,8 +4,7 @@ const schema = require('../schemas/health');
 module.exports = function (fastify, opts, next) {
   fastify.route({
     ...schema,
-    preHandler: async (request, reply) => {
-    },
+    preHandler: async (request, reply) => {},
     handler: async (request, reply) => {
       return reply.send({
         version: info.version,
@@ -15,7 +14,7 @@ module.exports = function (fastify, opts, next) {
         website: info.homepage,
         bugs: info.bugs.url,
       });
-    }
-  })
+    },
+  });
   next();
-}
+};

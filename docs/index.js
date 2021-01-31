@@ -9,7 +9,7 @@ module.exports = {
     },
     externalDocs: {
       url: 'https://salati.hmounir.com/docs',
-      description: 'Find more info here'
+      description: 'Find more info here',
     },
     host: 'localhost:3000',
     schemes: ['http', 'https'],
@@ -28,7 +28,6 @@ module.exports = {
         in: 'header',
       },
     },
-    definitions: {
-    },
+    definitions: {},
   },
 };

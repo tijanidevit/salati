@@ -1,5 +1,5 @@
-const server = require('../server')
-const headers = require('./headers')
+const server = require('../server');
+const headers = require('./headers');
 
 describe('E2E -  GET - /health', () => {
   afterAll(() => {
@@ -10,7 +10,7 @@ describe('E2E -  GET - /health', () => {
     const response = await server.inject({
       method: 'GET',
       headers: headers,
-      url: '/health'
+      url: '/health',
     });
 
     expect(response.statusCode).toBe(200);

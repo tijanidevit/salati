@@ -52,6 +52,7 @@ I wanted to create something that can provide you prayer time for any location. 
 Nothing to bother the customer, no advertissement, just free service.
 
 This will be the server support behind the possible application or web site that can come later.
+
 ### Built With
 
 You can see here the major frameworks that was built with. Project is mainly frontend.

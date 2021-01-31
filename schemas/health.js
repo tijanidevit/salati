@@ -18,9 +18,8 @@ module.exports = {
     tags: ['Health'],
     params: {
       type: 'object',
-      properties: {
-      }
+      properties: {},
     },
     response,
-  }
+  },
 };

@@ -15,17 +15,17 @@ const server = fastify({
     redact: ['req.headers.authorization'],
     prettyPrint: true,
     serializers: {
-      req (req) {
+      req(req) {
         return {
           method: req.method,
           url: req.url,
           headers: req.headers,
           hostname: req.hostname,
           remoteAddress: req.ip,
-          remotePort: req.connection.remotePort
-        }
-      }
-    }
+          remotePort: req.connection.remotePort,
+        };
+      },
+    },
   },
 });
 
@@ -77,6 +77,6 @@ server.register(load, {
 server.register(assets, {
   root: path.join(__dirname, 'schemas'),
   prefix: '/schemas/',
-})
+});
 
 module.exports = server;
