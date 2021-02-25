@@ -5,13 +5,14 @@ const cors = require('fastify-cors');
 const helmet = require('fastify-helmet');
 const load = require('fastify-autoload');
 const fastify = require('fastify');
+const mongoDb = require('fastify-mongodb');
+const config = require('config');
 
-const config = require('./config');
 const docs = require('./docs');
 
 const server = fastify({
   logger: {
-    level: config.logLevel,
+    level: config.get('logLevel'),
     redact: ['req.headers.authorization'],
     prettyPrint: true,
     serializers: {
@@ -45,6 +46,10 @@ server.register(helmet, {
   },
 });
 
+server.register(mongoDb, {
+  forceClose: true,
+  url: config.get('mongo')
+})
 /**
  * Custom plugins, middlewares etc.
  */
