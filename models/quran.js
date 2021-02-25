@@ -11,7 +11,7 @@ const quran = new Schema({
   surahs: {
     type: [Surah.Schema],
     required: false,
-  }
+  },
 });
 
 quran.plugin(mongoosePaginate);

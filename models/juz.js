@@ -20,7 +20,7 @@ const juz = new Schema({
     name: {
       type: String,
       required: false,
-    }
+    },
   },
   end: {
     index: {
@@ -34,8 +34,8 @@ const juz = new Schema({
     name: {
       type: String,
       required: false,
-    }
-  }
+    },
+  },
 });
 
 juz.plugin(mongoosePaginate);

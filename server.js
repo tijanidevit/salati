@@ -48,8 +48,8 @@ server.register(helmet, {
 
 server.register(mongoDb, {
   forceClose: true,
-  url: config.get('mongo')
-})
+  url: config.get('mongo'),
+});
 /**
  * Custom plugins, middlewares etc.
  */

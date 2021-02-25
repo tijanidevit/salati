@@ -17,7 +17,7 @@ const asmaa = new Schema({
   number: {
     type: Number,
     required: false,
-  }
+  },
 });
 
 asmaa.plugin(mongoosePaginate);

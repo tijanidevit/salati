@@ -11,7 +11,7 @@ const verse = new Schema({
   number: {
     type: Number,
     required: false,
-  }
+  },
 });
 
 verse.plugin(mongoosePaginate);
