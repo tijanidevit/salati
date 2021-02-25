@@ -12,6 +12,7 @@
     "fastify-autoload": "^3.4.2",
     "fastify-cors": "^5.2.0",
     "fastify-helmet": "^5.2.0",
+    "fastify-mongodb": "^2.0.1",
     "fastify-static": "^3.4.0",
     "fastify-swagger": "^4.0.1",
     "pino-pretty": "^4.3.0"
@@ -30,7 +31,7 @@
   "license": "0BSD",
   "scripts": {
     "start": "node index.js",
-    "dev": "nodemon index.js",
+    "dev": "NODE_ENV=local nodemon index.js",
     "test": "jest test testPathIgnorePatterns",
     "coverage": "jest test testPathIgnorePatterns --coverage",
     "lint": "xo",
