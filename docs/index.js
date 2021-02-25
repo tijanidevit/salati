@@ -16,10 +16,10 @@ module.exports = {
     consumes: ['application/json'],
     produces: ['application/json'],
     tags: [
-      { name: 'quran', description: 'Quran related end-points' },
-      { name: 'prayer', description: 'Prayer related end-points' },
-      { name: 'asmaa', description: 'Asmaa ul Husnaa related end-points' },
-      { name: 'calendar', description: 'Calendar related end-points' },
+      { name: 'Quran', description: 'Quran related end-points' },
+      { name: 'Prayer', description: 'Prayer related end-points' },
+      { name: 'Asmaa', description: 'Asmaa ul Husnaa related end-points' },
+      { name: 'Calendar', description: 'Calendar related end-points' },
     ],
     securityDefinitions: {
       apiKey: {
