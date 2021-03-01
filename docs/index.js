@@ -1,3 +1,7 @@
+const MetadataSchema = require("./metadata.json");
+const TranslationSchema = require("./translation.json");
+const AsmaaSchema = require("./asmaa.json");
+
 module.exports = {
   routePrefix: '/docs',
   exposeRoute: true,
@@ -28,6 +32,10 @@ module.exports = {
         in: 'header',
       },
     },
-    definitions: {},
+    definitions: {
+      Asmaa: AsmaaSchema,
+      Metadata: MetadataSchema,
+      Translation: TranslationSchema,
+    },
   },
 };

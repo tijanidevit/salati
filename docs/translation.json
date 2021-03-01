@@ -1,0 +1,27 @@
+{
+  "title": "Translation",
+  "required": [
+    "language",
+    "name"
+  ],
+  "properties": {
+    "language": {
+      "type": "string",
+      "enum": [
+        "en",
+        "ar",
+        "fr"
+      ]
+    },
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string",
+      "required": false
+    },
+    "_id": {
+      "type": "string"
+    }
+  }
+}

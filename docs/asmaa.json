@@ -1,0 +1,30 @@
+{
+  "title": "Asmaa",
+  "properties": {
+    "translations": {
+      "type": "array",
+      "required": false,
+      "$ref": "#/definitions/Translation"
+    },
+    "number": {
+      "type": "number",
+      "required": false
+    },
+    "metadatas": {
+      "type": "array",
+      "required": false,
+      "$ref": "#/definitions/Metadata"
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "_id": {
+      "type": "string"
+    }
+  }
+}
