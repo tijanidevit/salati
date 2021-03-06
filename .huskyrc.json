@@ -2,6 +2,6 @@
   "hooks": {
     "pre-commit": "hooks/check-test-only.sh",
     "prepare-commit-msg": "hooks/prepare-commit-msg.sh ${HUSKY_GIT_PARAMS}",
-    "pre-push": "hooks/check-no-console-call.sh && hooks/run-test-prepush.sh"
+    "pre-push": "hooks/check-no-console-call.sh && hooks/run-test-prepush.sh && hooks/run-lint-prepush.sh"
   }
 }

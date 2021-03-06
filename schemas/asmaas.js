@@ -1,3 +1,4 @@
+const asmaas = require('../docs/models/asmaa');
 const { getResponse } = require('../lib/responses');
 
 module.exports = {
@@ -5,13 +6,13 @@ module.exports = {
   url: '/asmaas',
   schema: {
     tags: ['Asmaa'],
-    params: {
-      type: 'object',
-      properties: {},
-    },
+    summary: 'Give all the Asmaa ul Husnaa',
+    description: 'Give all the Asmaa ul Husnaa',
+    operationId: 'getAllAsmaa',
     response: getResponse({
       success: {
-        number: { example: 1, type: 'number' },
+        type: 'array',
+        items: asmaas,
       },
     }),
   },
