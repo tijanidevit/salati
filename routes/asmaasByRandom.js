@@ -1,4 +1,4 @@
-const schema = require('../schemas/asmaas');
+const schema = require('../schemas/asmaaByRandom');
 
 module.exports = (fastify, opts, next) => {
   fastify.route({

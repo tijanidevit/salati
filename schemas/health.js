@@ -1,5 +1,5 @@
 const success = require('../docs/models/health');
-const { getResponse } = require('../lib/responses');
+const { getResponse } = require('../lib/http/responses');
 
 module.exports = {
   method: 'GET',

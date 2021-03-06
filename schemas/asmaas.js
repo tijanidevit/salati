@@ -1,5 +1,5 @@
 const asmaas = require('../docs/models/asmaa');
-const { getResponse } = require('../lib/responses');
+const { getResponse } = require('../lib/http/responses');
 
 module.exports = {
   method: 'GET',
