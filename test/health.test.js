@@ -9,7 +9,7 @@ describe('E2E -  GET - /health', () => {
   test('responds with success on request /health', async (done) => {
     const response = await server.inject({
       method: 'GET',
-      headers: headers,
+      headers,
       url: '/health',
     });
 

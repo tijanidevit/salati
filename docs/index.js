@@ -28,7 +28,6 @@ module.exports = {
         in: 'header',
       },
     },
-
     definitions,
   },
 };

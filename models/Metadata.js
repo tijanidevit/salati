@@ -1,4 +1,4 @@
-const { Schema } = require('mongoose');
+const { Schema, model } = require('mongoose');
 
 const Metadata = new Schema({
   key: {
@@ -11,4 +11,4 @@ const Metadata = new Schema({
   },
 });
 
-module.exports = mongoose.model('Metadata', Metadata);
+module.exports = model('Metadata', Metadata);

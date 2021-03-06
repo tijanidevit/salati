@@ -1,5 +1,5 @@
 const config = require('config');
-const { Schema } = require('mongoose');
+const { Schema, model } = require('mongoose');
 
 const Translation = new Schema({
   language: {
@@ -17,4 +17,4 @@ const Translation = new Schema({
   },
 });
 
-module.exports = mongoose.model('Translation', Translation);
+module.exports = model('Translation', Translation);
