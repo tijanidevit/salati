@@ -1,4 +1,4 @@
-const NotFoundError = require('./NotFoundError');
+const NotFoundError = require('../models/errors/NotFoundError');
 
 describe('Salati - models - errors - NotFoundError', () => {
   it('should create a valid instance', () => {

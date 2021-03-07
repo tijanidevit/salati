@@ -1,4 +1,4 @@
-const ValidationError = require('./ValidationError');
+const ValidationError = require('../models/errors/ValidationError');
 
 describe('Salati - models - errors - ValidationError', () => {
   it('should create a valid instance', () => {

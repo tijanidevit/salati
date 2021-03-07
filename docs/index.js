@@ -13,7 +13,7 @@ module.exports = {
       license: { name: 'MIT License', url: 'https://github.com/hamzaPixl/salati/blob/master/LICENSE' },
     },
     host: 'localhost:3000',
-    schemes: ['https', 'http'],
+    schemes: ['http'],
     tags: [
       { name: 'Quran', description: 'Quran related end-points' },
       { name: 'Prayer', description: 'Prayer related end-points' },

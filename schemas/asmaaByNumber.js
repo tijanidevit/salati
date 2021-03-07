@@ -3,15 +3,23 @@ const { getResponse } = require('../lib/http/responses');
 
 module.exports = {
   method: 'GET',
-  url: '/asmaas/:number',
+  url: '/asmaas/{number}',
   schema: {
     tags: ['Asmaa'],
     summary: 'Finds the name by its number in the list. 1-99',
     description: 'Finds the name by its number in the list. 1-99',
     operationId: 'getAsmaaByNumber',
-    parameters: [
-      { name: 'number', in: 'path', description: 'The number of the name', required: true, type: 'number', default: 1 },
-    ],
+    params: {
+      type: 'object',
+      properties: {
+        number: {
+          type: 'string',
+          default: 1,
+          in: 'path',
+          description: 'The number of the name',
+        },
+      },
+    },
     response: getResponse({ success }),
   },
 };

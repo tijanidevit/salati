@@ -1,4 +1,4 @@
-const ApiError = require('./ApiError');
+const ApiError = require('../models/errors/ApiError');
 
 describe('Salati - models - errors - ApiError', () => {
   it('should create a valid instance', () => {

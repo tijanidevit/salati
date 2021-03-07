@@ -1,4 +1,4 @@
-const server = require('../server');
+const server = require('../../server');
 const headers = require('./headers');
 
 describe('E2E -  GET - /health', () => {

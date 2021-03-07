@@ -1,4 +1,4 @@
-const httpQueriesExtractor = require('./httpQueriesExtractor');
+const httpQueriesExtractor = require('./../lib/http/httpQueriesExtractor');
 
 describe('Salati - tools - http - httpQueriesExtractor', () => {
   describe('extractSort()', () => {

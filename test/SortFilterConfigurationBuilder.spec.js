@@ -1,8 +1,8 @@
-const SortFilterConfigurationBuilder = require('./SortFilterConfigurationBuilder');
+const SortFilterConfigurationBuilder = require('./../lib/mongo/SortFilterConfigurationBuilder');
 
-const FilterConfigurationBuilder = require('./FilterConfigurationBuilder');
-const SortConfigurationBuilder = require('./SortConfigurationBuilder');
-const filterComparison = require('./filterComparison');
+const FilterConfigurationBuilder = require('./../lib/mongo/FilterConfigurationBuilder');
+const SortConfigurationBuilder = require('./../lib/mongo/SortConfigurationBuilder');
+const filterComparison = require('./../lib/mongo/filterComparison');
 
 describe('Salati - tools - mongo - SortFilterConfigurationBuilder', () => {
   describe('filterOn()', () => {

@@ -2,7 +2,7 @@
   "name": "salati",
   "private": true,
   "description": "Server for salt application.",
-  "version": "0.0.0-development",
+  "version": "1.0.0",
   "homepage": "http://salat.hmounir.com",
   "author": "Hamza Mounir <hamza.pixelle@gmail.com>",
   "main": "server.js",

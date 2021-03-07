@@ -1,4 +1,4 @@
-const AuthenticationError = require('./AuthenticationError');
+const AuthenticationError = require('../models/errors/AuthenticationError');
 
 describe('Salati - models - errors - AuthenticationError', () => {
   it('should create a valid instance', () => {

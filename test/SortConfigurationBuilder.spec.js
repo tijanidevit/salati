@@ -1,4 +1,4 @@
-const SortConfigurationBuilder = require('./SortConfigurationBuilder');
+const SortConfigurationBuilder = require('./../lib/mongo/SortConfigurationBuilder');
 
 describe('Salati - tools - mongo - SortConfigurationBuilder', () => {
   describe('addConfiguration()', () => {
