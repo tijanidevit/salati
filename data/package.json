@@ -1,0 +1,14 @@
+{
+  "name": "data-migrations",
+  "version": "1.0.0",
+  "description": "Migrations directory",
+  "author": "Mounir Hamza",
+  "license": "MIT",
+  "engines": {
+    "node": "12.16.1"
+  },
+  "dependencies": {
+    "bluebird": "^3.7.2",
+    "migrate-mongo": "^8.2.2"
+  }
+}
