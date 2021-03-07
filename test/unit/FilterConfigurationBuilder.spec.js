@@ -1,5 +1,5 @@
-const FilterConfigurationBuilder = require('./../lib/mongo/FilterConfigurationBuilder');
-const filterComparison = require('./../lib/mongo/filterComparison');
+const FilterConfigurationBuilder = require('./../../lib/mongo/FilterConfigurationBuilder');
+const filterComparison = require('./../../lib/mongo/filterComparison');
 
 describe('Salati - tools - mongo - FilterConfigurationBuilder', () => {
   describe('addConfiguration()', () => {

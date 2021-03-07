@@ -1,5 +1,5 @@
 const { Schema, model } = require('mongoose');
-const mongoosePaginate = require('mongoose-paginate');
+const mongoosePaginate = require('mongoose-paginate-v2');
 
 const Metadata = require('./Metadata');
 const Translation = require('./Translation');
@@ -30,4 +30,4 @@ const Asmaa = new Schema({
 
 Asmaa.plugin(mongoosePaginate);
 
-module.exports = model('Asmaa', Asmaa);
+module.exports = model('Asmaas', Asmaa);

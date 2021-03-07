@@ -3,7 +3,7 @@ const { getResponse } = require('../lib/http/responses');
 
 module.exports = {
   method: 'GET',
-  url: '/asmaas/{number}',
+  url: '/asmaas/:number',
   schema: {
     tags: ['Asmaa'],
     summary: 'Finds the name by its number in the list. 1-99',

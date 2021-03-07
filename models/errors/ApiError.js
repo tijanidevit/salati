@@ -3,6 +3,7 @@ class ApiError extends Error {
     super(message || 'API error', error);
 
     this.name = 'ApiError';
+    this.statusCode = 500;
 
     return this;
   }

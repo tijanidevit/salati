@@ -5,10 +5,11 @@ const cors = require('fastify-cors');
 const helmet = require('fastify-helmet');
 const load = require('fastify-autoload');
 const fastify = require('fastify');
-const mongoDb = require('fastify-mongodb');
+const mongoose = require('mongoose');
 const config = require('config');
 
 const docs = require('./docs');
+const db = require('./lib/mongo/db');
 
 const server = fastify({
   logger: {
@@ -30,10 +31,12 @@ const server = fastify({
   },
 });
 
+// Mongo connection
+db(mongoose, config.get('mongo'));
+
 /**
  * Server plugins, security etc.
  */
-
 server.register(cors);
 server.register(helmet, {
   contentSecurityPolicy: {
@@ -46,10 +49,6 @@ server.register(helmet, {
   },
 });
 
-server.register(mongoDb, {
-  forceClose: true,
-  url: config.get('mongo'),
-});
 /**
  * Custom plugins, middlewares etc.
  */
@@ -63,13 +62,7 @@ server.register(swagger, docs);
 /*
  * Error handler
  */
-server.setErrorHandler(async (error, request, reply) => {
-  if (reply.res.statusCode === 500) {
-    return reply.internalServerError();
-  }
-
-  return reply.send(error);
-});
+server.setErrorHandler(async (error, request, reply) => reply.send(error));
 
 server.register(assets, {
   root: path.join(__dirname, 'schemas'),

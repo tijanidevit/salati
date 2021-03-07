@@ -19,6 +19,7 @@ module.exports = {
       { name: 'Prayer', description: 'Prayer related end-points' },
       { name: 'Asmaa', description: 'Asmaa ul Husnaa related end-points' },
       { name: 'Calendar', description: 'Calendar related end-points' },
+      { name: 'Health', description: 'Health ping to server' },
     ],
     externalDocs: { description: 'Find more info here', url: 'https://salati.hmounir.com/docs' },
     securityDefinitions: {

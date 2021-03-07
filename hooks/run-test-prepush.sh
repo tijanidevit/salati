@@ -3,7 +3,7 @@ current_branch=$(git symbolic-ref HEAD | sed -e 's,.*/\(.*\),\1,')
 pass=true
 
 if [ $current_branch = "master" ]; then
-  yarn test
+  yarn test && yarn test:e2e
   if [ $? != 0 ]; then
     pass=false
   fi

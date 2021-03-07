@@ -3,6 +3,7 @@ class AuthenticationError extends Error {
     super(message || 'Authentication Error');
 
     this.name = 'AuthenticationError';
+    this.statusCode = 401;
 
     return this;
   }

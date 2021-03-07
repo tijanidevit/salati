@@ -5,6 +5,7 @@ class ValidationError extends Error {
     this.name = 'ValidationError';
     this.code = code;
     this.details = details;
+    this.statusCode = 400;
 
     return this;
   }

@@ -1,4 +1,5 @@
 const asmaas = require('../salati/asmaas.json');
+const Asmaa = require('../../models/Asmaa');
 
 async function addAsmaa(asmaa, db) {
   return db.collection('asmaas').insert(asmaa);
@@ -8,7 +9,7 @@ module.exports = {
 
   async up(db, next) {
     await asmaas.map(async (payload) => {
-      const asmaa = {
+      const asmaa = new Asmaa({
         number: payload.number,
         translations: [
           {
@@ -23,7 +24,7 @@ module.exports = {
           },
         ],
         metadatas: [],
-      };
+      });
       await addAsmaa(asmaa, db);
     });
     next();

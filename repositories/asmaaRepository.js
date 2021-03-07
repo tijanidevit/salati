@@ -1,4 +1,3 @@
-const config = require('config');
 const mongoQueryBuilder = require('../lib/mongo/mongoQueryBuilder');
 const Asmaa = require('../models/Asmaa');
 
@@ -6,18 +5,16 @@ const Asmaa = require('../models/Asmaa');
  * Retrieve all Asmaa
  * @returns {Asmaa}
  */
-function findAll(organisation, sortFilterConfiguration) {
+async function findAll(sortFilterConfiguration) {
   const options = {
-    select: '*',
     sort: {},
     lean: false,
-    page: sortFilterConfiguration.pageNumber,
-    limit: config.pageSize,
+    page: sortFilterConfiguration.page,
+    limit: 99,
   };
 
   const query = mongoQueryBuilder.buildFilter(sortFilterConfiguration);
   options.sort = mongoQueryBuilder.buildSort(sortFilterConfiguration);
-  query.organisation = organisation;
   return Asmaa.paginate(query, options);
 }
 
