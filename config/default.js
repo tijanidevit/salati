@@ -12,6 +12,6 @@ module.exports = {
   defaultTimezone: 'Europe/Brussels',
   port: process.env.PORT || 3000,
   secret: process.env.SECRET,
-  host: process.env.HOST || 'localhost',
+  host: process.env.HOST || '0.0.0.0',
   mongo: process.env.MONGO || 'mongodb://localhost:27017/salati',
 };
