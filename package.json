@@ -6,6 +6,9 @@
   "homepage": "http://salat.hmounir.com",
   "author": "Hamza Mounir <hamza.pixelle@gmail.com>",
   "main": "server.js",
+  "engines": {
+    "node": "12.16.1"
+  },
   "dependencies": {
     "config": "^3.3.3",
     "fastify": "^3.11.0",
