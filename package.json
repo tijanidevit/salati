@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "config": "^3.3.3",
-    "fastify": "^3.11.0",
+    "fastify": "^3.14.0",
     "fastify-autoload": "^3.4.2",
     "fastify-cors": "^5.2.0",
     "fastify-helmet": "^5.2.0",
