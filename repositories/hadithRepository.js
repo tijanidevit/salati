@@ -1,9 +1,9 @@
 const mongoQueryBuilder = require('../lib/mongo/mongoQueryBuilder');
-const Asmaa = require('../models/Asmaa');
+const Hadith = require('../models/Hadith');
 
 /**
- * Retrieve all Asmaa
- * @returns {Asmaa}
+ * Retrieve all Hadith
+ * @returns {Hadith}
  */
 async function findAll(sortFilterConfiguration) {
   const options = {
@@ -15,23 +15,23 @@ async function findAll(sortFilterConfiguration) {
 
   const query = mongoQueryBuilder.buildFilter(sortFilterConfiguration);
   options.sort = mongoQueryBuilder.buildSort(sortFilterConfiguration);
-  return Asmaa.paginate(query, options);
+  return Hadith.paginate(query, options);
 }
 
 /**
- * Retrieve asmaa by its number
- * @returns {Asmaa}
+ * Retrieve hadith by its id
+ * @returns {Hadith}
  */
-function findOne(number) {
-  return Asmaa.findOne({ number });
+function findOne(id) {
+  return Hadith.findOne({ id });
 }
 
 /**
- * Retrieve asmaa randomly
+ * Retrieve hadith randomly
  * @returns {Hadith}
  */
 function findRandomly() {
-  return Asmaa.aggregate([{ $sample: { size: 1 } }]);
+  return Hadith.aggregate([{ $sample: { size: 1 } }]);
 }
 
 module.exports = {

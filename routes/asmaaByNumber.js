@@ -11,6 +11,9 @@ module.exports = (fastify, opts, next) => {
         throw new errors.ValidationError('Id of the name is invalid must be between 1-99 included', 'VALIDATION_ERROR');
       }
       const asmaa = await findOne(number);
+      if (!asmaa) {
+        throw new errors.NotFoundError('The name cannot be found.');
+      }
       return reply.send(asmaa);
     },
   });

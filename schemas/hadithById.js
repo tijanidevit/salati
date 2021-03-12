@@ -1,22 +1,22 @@
-const success = require('../docs/models/asmaa');
+const success = require('../docs/models/hadith');
 const { getResponse } = require('../lib/http/responses');
 
 module.exports = {
   method: 'GET',
-  url: '/asmaas/:number',
+  url: '/hadiths/:id',
   schema: {
-    tags: ['Asmaa'],
-    summary: 'Finds the name by its number in the list. 1-99',
-    description: 'Finds the name by its number in the list. 1-99',
-    operationId: 'getAsmaaByNumber',
+    tags: ['Hadith'],
+    summary: 'Finds the hadith by its id in the list.',
+    description: 'Finds the hadith by its id in the list.',
+    operationId: 'getHaditById',
     params: {
       type: 'object',
       properties: {
-        number: {
+        id: {
           type: 'string',
           default: 1,
           in: 'path',
-          description: 'The number of the name',
+          description: 'The id of the hadit',
         },
       },
     },
@@ -25,7 +25,7 @@ module.exports = {
       validation: {
         message: {
           type: 'string',
-          example: 'Id of the name is invalid must be between 1-99 included',
+          example: 'Id of the hadith is required',
         },
         code: {
           type: 'string',
@@ -39,7 +39,7 @@ module.exports = {
       notFound: {
         message: {
           type: 'string',
-          example: 'The name cannot be found.',
+          example: 'The hadit cannot be found.',
         },
         code: {
           type: 'number',
@@ -51,5 +51,6 @@ module.exports = {
         },
       },
     }),
+
   },
 };

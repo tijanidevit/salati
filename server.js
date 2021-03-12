@@ -5,11 +5,9 @@ const cors = require('fastify-cors');
 const helmet = require('fastify-helmet');
 const load = require('fastify-autoload');
 const fastify = require('fastify');
-const mongoose = require('mongoose');
 const config = require('config');
 
 const docs = require('./docs');
-const db = require('./lib/mongo/db');
 
 const server = fastify({
   logger: {
@@ -30,9 +28,6 @@ const server = fastify({
     },
   },
 });
-
-// Mongo connection
-db(mongoose, config.get('mongo'));
 
 /**
  * Server plugins, security etc.

@@ -62,7 +62,7 @@ You can see here the major frameworks that was built with. Project is mainly fro
 - [Heroku](https://www.heroku.com/)
 
 - [Aladhan](https://aladhan.com/) Some information for date and some meta information.
-- [Sunnah api](https://sunnah.api-docs.io/1.0/getting-started/introduction) Provide random hadits for the application.
+- [Sunnah api](https://sunnah.api-docs.io/1.0/getting-started/introduction) Provide random hadiths for the application.
 - [Prayer Time](http://praytimes.org/) Thank you Hamid Zarrabi-Zadeh for the prayer calculation.
 
 ## Getting Started
