@@ -8,8 +8,11 @@ module.exports = {
     maghrib: { type: 'string', example: '05:06:00' },
     isha: { type: 'string', example: '05:06:00' },
     extras: {
-      current: { type: 'string', example: 'asr' },
-      next: { type: 'string', example: 'maghrib' },
+      title: 'Extras',
+      properties: {
+        current: { type: 'string', example: 'asr' },
+        next: { type: 'string', example: 'maghrib' },
+      },
     },
   },
 };
