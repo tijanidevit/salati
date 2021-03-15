@@ -13,7 +13,7 @@ module.exports = {
       contact: { email: 'hmounir.work@gmail.com' },
       license: { name: 'MIT License', url: 'https://github.com/hamzaPixl/salati/blob/master/LICENSE' },
     },
-    host: `${config.get('host')}:${config.get('port')}`,
+    host: config.get('swaggerHost'),
     schemes: ['http', 'https'],
     tags: [
       { name: 'Health', description: 'Health ping to server' },

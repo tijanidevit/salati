@@ -17,5 +17,6 @@ module.exports = {
   port: process.env.PORT || 3000,
   secret: process.env.SECRET,
   host: process.env.HOST || '0.0.0.0',
+  swaggerHost: 'salati.hmounir.com',
   mongo: process.env.MONGO || 'mongodb://localhost:27017/salati',
 };
