@@ -10,6 +10,10 @@ module.exports = {
   env: process.env.NODE_ENV,
   originUrl: process.env.ORIGIN_URL,
   defaultTimezone: 'Europe/Brussels',
+  localisation: {
+    latitude: 50.8465573,
+    longitude: 4.351697,
+  },
   port: process.env.PORT || 3000,
   secret: process.env.SECRET,
   host: process.env.HOST || '0.0.0.0',
