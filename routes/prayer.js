@@ -1,12 +1,7 @@
 const adhan = require('adhan');
 const config = require('config');
-const { utcToZonedTime, format } = require('date-fns-tz');
 const schema = require('../schemas/prayer');
-
-function displayDate(prayer, timezone = config.get('defaultTimezone')) {
-  const FORMAT = 'HH:mm:ss';
-  return format(utcToZonedTime(prayer, timezone), FORMAT);
-}
+const { prayerToTime } = require('../lib/date');
 
 async function getPrayerTimes(date = new Date(), localisation = config.get('localisation')) {
   const coords = new adhan.Coordinates(localisation.latitude, localisation.longitude);
@@ -14,12 +9,12 @@ async function getPrayerTimes(date = new Date(), localisation = config.get('loca
   const prayerTimes = new adhan.PrayerTimes(coords, date, params);
 
   return {
-    fajr: displayDate(prayerTimes.fajr),
-    sunrise: displayDate(prayerTimes.sunrise),
-    dhuhr: displayDate(prayerTimes.dhuhr),
-    asr: displayDate(prayerTimes.asr),
-    maghrib: displayDate(prayerTimes.maghrib),
-    isha: displayDate(prayerTimes.isha),
+    fajr: prayerToTime(prayerTimes.fajr),
+    sunrise: prayerToTime(prayerTimes.sunrise),
+    dhuhr: prayerToTime(prayerTimes.dhuhr),
+    asr: prayerToTime(prayerTimes.asr),
+    maghrib: prayerToTime(prayerTimes.maghrib),
+    isha: prayerToTime(prayerTimes.isha),
     extras: {
       current: prayerTimes.currentPrayer(),
       next: prayerTimes.nextPrayer(),
