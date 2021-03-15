@@ -23,7 +23,6 @@ async function getPrayerTimes(date = new Date(), localisation = config.get('loca
     extras: {
       current: prayerTimes.currentPrayer(),
       next: prayerTimes.nextPrayer(),
-      timingToNext: displayDate(prayerTimes.timeForPrayer(prayerTimes.nextPrayer())),
     },
   };
 }

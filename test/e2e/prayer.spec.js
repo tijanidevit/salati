@@ -25,7 +25,6 @@ describe('E2E -  GET - /prayer', () => {
     expect(body.extras).toBeDefined();
     expect(body.extras.current).toBeDefined();
     expect(body.extras.next).toBeDefined();
-    expect(body.extras.timingToNext).toBeDefined();
     done();
   });
 });

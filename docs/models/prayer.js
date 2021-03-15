@@ -10,7 +10,6 @@ module.exports = {
     extras: {
       current: { type: 'string', example: 'asr' },
       next: { type: 'string', example: 'maghrib' },
-      timingToNext: { type: 'string', example: '05:06:00' },
     },
   },
 };
